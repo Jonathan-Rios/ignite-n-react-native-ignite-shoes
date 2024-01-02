@@ -46,13 +46,8 @@
 Descrição do projeto:
 Essa aplicação foi desenvolvida para estudos seguindo os ensinamentos da **[Rocketseat](https://www.rocketseat.com.br/)** no curso Ignite **[Ignite](https://www.rocketseat.com.br/ignite)** .
 
-O projeto de estudo que permite gerenciar grupos para jogos, o qual cada grupo tem dois times, e consegue gerenciar os jogadores nesses times.
-
-Nele é abordado os fundamentos do React Native, assim como:
-  * Mapeamento de pastas
-  * Navegação com ReactNavigation StackNavigation
-  * Armazenamento/Gerenciamento de dados localmente com AsyncStorage
-  * Tratamento de erros
+O projeto foi criado pela rocketseat e fornecido para ser focado em Push Notification e Deeplink usando o OneSignal para gerenciar esses recursos, junto com o FCM (Firebase Cloud Message) e APNs (Apple Push Notification service).
+ 
  
 ## 🧪 Tecnologias
 
@@ -61,6 +56,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [ReactNative](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Expo](https://expo.dev/)
+- [OneSignal](https://onesignal.com/)
+- [FireBase](https://firebase.google.com/)
 
 ## 🚀 Como executar
 
