@@ -46,7 +46,7 @@
 Descrição do projeto:
 Essa aplicação foi desenvolvida para estudos seguindo os ensinamentos da **[Rocketseat](https://www.rocketseat.com.br/)** no curso Ignite **[Ignite](https://www.rocketseat.com.br/ignite)** .
 
-O projeto foi criado pela rocketseat e fornecido para ser focado em Push Notification e Deeplink usando o OneSignal para gerenciar esses recursos, junto com o FCM (Firebase Cloud Message) e APNs (Apple Push Notification service).
+O projeto foi criado pela rocketseat e fornecido para ser focado em Push Notification e DeepLink usando o OneSignal para gerenciar esses recursos, junto com o FCM (Firebase Cloud Message) e APNs (Apple Push Notification service).
  
  
 ## 🧪 Tecnologias
