@@ -37,7 +37,7 @@
 <h3 align="center">Imagem prévia da aplicação</h3>
 
 <div align="center">
-  <img src=".github/project-preview.gif?style=flat" alt="Cover" width="310" height="650">
+  <img src=".github/project-preview.png?style=flat" alt="Cover" width="310" height="650">
 </div>
  
 <br>
@@ -109,6 +109,14 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE.md) pa
   # Mudando o Workflow do projeto
     ➜ npx expo prebuild #Para sugerir o nome, no arquivo app.json, informe o valor de "bundleIdentifier"
     ✔ What would you like your Android package name to be? … com.jrs.igniteshoes
+    
+    # Para o expo rodar nossa aplicação com um expo customizado usando o código nativo gerado no dispositivo
+    ➜ npx expo install expo-dev-client
+    npx expo start --dev-client
+
+  # Dependência para gerenciar os links do DeepLink
+  ➜ npx expo install expo-linking
+
 
 ```
  

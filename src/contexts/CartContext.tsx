@@ -7,17 +7,21 @@ import {
   storageProductGetAll,
 } from '../storage/storageCart';
 
+import { tagCartUpdate } from '../notifications/notificationsTags';
+
 export type CartContextDataProps = {
   addProductCart: (newProduct: StorageCartProps) => Promise<void>;
   removeProductCart: (productId: string) => Promise<void>;
   cart: StorageCartProps[];
-}
+};
 
 type CartContextProviderProps = {
   children: ReactNode;
-}
+};
 
-export const CartContext = createContext<CartContextDataProps>({} as CartContextDataProps);
+export const CartContext = createContext<CartContextDataProps>(
+  {} as CartContextDataProps,
+);
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cart, setCart] = useState<StorageCartProps[]>([]);
@@ -25,7 +29,10 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   async function addProductCart(newProduct: StorageCartProps) {
     try {
       const storageResponse = await storageProductSave(newProduct);
+
       setCart(storageResponse);
+
+      tagCartUpdate(storageResponse.length.toString());
     } catch (error) {
       throw error;
     }
@@ -33,8 +40,11 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
 
   async function removeProductCart(productId: string) {
     try {
-      const response = await storageProductRemove(productId);
-      setCart(response);
+      const storageResponse = await storageProductRemove(productId);
+
+      setCart(storageResponse);
+
+      tagCartUpdate(storageResponse.length.toString());
     } catch (error) {
       throw error;
     }
@@ -47,12 +57,14 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   }, []);
 
   return (
-    <CartContext.Provider value={{
-      cart,
-      addProductCart,
-      removeProductCart,
-    }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addProductCart,
+        removeProductCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
-  )
+  );
 }
